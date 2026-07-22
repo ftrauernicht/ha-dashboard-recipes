@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ftrauernicht/hassio-dashboard-recipes/main/schema/recipes.schema.json",
+  "title": "Hassio Dashboard Recipes",
+  "type": "object",
+  "required": ["recipes"],
+  "additionalProperties": false,
+  "properties": {
+    "recipes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable, unique, kebab-case identifier. Never reused or changed once published.",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name shown on the Home Assistant dashboard tile.",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional longer text. Not rendered by the current dashboard tile, but reserved for future use (e.g. a detail popup).",
+            "maxLength": 280
+          }
+        }
+      }
+    }
+  }
+}
