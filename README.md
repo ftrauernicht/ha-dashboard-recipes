@@ -42,27 +42,29 @@ The repo is public, so the raw data file can be polled directly, no authenticati
 https://raw.githubusercontent.com/ftrauernicht/hassio-dashboard-recipes/main/recipes/recipes.json
 ```
 
-Minimal integration, replacing a hardcoded dish list with a live `rest` sensor:
+For the full picture — a sensor that avoids repeating recent picks, the picking script, and a ready-to-paste dashboard card (with a screenshot) — see **[docs/home-assistant-setup.md](docs/home-assistant-setup.md)**.
+
+Minimal example if you just want the raw list as a sensor attribute:
 
 ```yaml
 rest:
   - resource: https://raw.githubusercontent.com/ftrauernicht/hassio-dashboard-recipes/main/recipes/recipes.json
     scan_interval: 3600 # raw.githubusercontent.com is CDN-cached for a few minutes; polling more often than that has no effect
     sensor:
-      - name: "Gerichte Liste"
-        unique_id: gerichte_liste
-        value_template: "Liste geladen"
+      - name: "Dish List"
+        unique_id: dish_list
+        value_template: "loaded"
         json_attributes:
           - recipes
 ```
 
-This produces the same shape as the previous hardcoded template sensor (`sensor.gerichte_liste`), except the `recipes` attribute is now a list of `{id, name, description}` objects instead of plain strings. A consuming script/template needs to pull out `name`, e.g.:
+The `recipes` attribute is a list of `{id, name, description}` objects. A consuming script/template can pull out `name`, e.g.:
 
 ```jinja
-{{ state_attr('sensor.gerichte_liste', 'recipes') | map(attribute='name') | list }}
+{{ state_attr('sensor.dish_list', 'recipes') | map(attribute='name') | list }}
 ```
 
-To force an immediate refresh instead of waiting for `scan_interval`, call `homeassistant.update_entity` on `sensor.gerichte_liste`.
+To force an immediate refresh instead of waiting for `scan_interval`, call `homeassistant.update_entity` on `sensor.dish_list`.
 
 ## License
 
