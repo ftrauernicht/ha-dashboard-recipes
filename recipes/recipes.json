@@ -2,7 +2,7 @@
   "recipes": [
     { "id": "spaghetti-bolognese", "name": "Spaghetti Bolognese" },
     { "id": "spaghetti-mit-pesto", "name": "Spaghetti mit Pesto" },
-    { "id": "nudeln-mit-salami-fleischwurst", "name": "Nudeln mit Salami / Fleischwurst" },
+    { "id": "nudeln-mit-salami-fleischwurst", "name": "Nudeln mit Salami o. Fleischwurst" },
     { "id": "kartoffelsuppe", "name": "Kartoffelsuppe" },
     { "id": "salat", "name": "Salat" },
     { "id": "nudelsalat-mit-tomaten-und-mozarella", "name": "Nudelsalat mit Tomaten und Mozarella" },
@@ -41,6 +41,14 @@
     { "id": "bruschetta", "name": "Bruschetta" },
     { "id": "mini-maultaschen", "name": "Mini-Maultaschen" },
     { "id": "selbstgemachter-burger-inkl-vegetarischer-alternative", "name": "Selbstgemacht Burger inkl. vegetarischer Alternative" },
-    { "id": "nudeln-mit-butter-maggi-pasta-gewuerz", "name": "Nudeln mit Butter / Maggi / Pasta-Gewürz" }
+    { "id": "nudeln-mit-butter-maggi-pasta-gewuerz", "name": "Nudeln mit Butter / Maggi / Pasta-Gewürz" },
+    { "id": "grillen-draussen", "name": "Grillen" },
+    { "id": "hello-fresh-cheesy-quesadillas", "name": "Cheesy Quesadillas (Hello Fresh)" },
+    { "id": "hello-fresh-schupfnudel-pfanne", "name": "Schupfnudel-Pfanne (Hello Fresh)" },
+    { "id": "hello-fresh-tacos", "name": "Tacos (Hello Fresh)" },
+    { "id": "french-toast-sweet", "name": "French Toast - Süß (Armer Ritter)" },
+    { "id": "cold-kitchen", "name": "Nichts." },
+    { "id": "gruenkohl-eintopf", "name": "Grünkohl" },
+    { "id": "sunday", "name": "Fleisch mit Gemüse und Knödeln o. Kartoffeln" }
   ]
 }
