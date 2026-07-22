@@ -20,3 +20,4 @@ This repo's only job is to be a single source of truth for `recipes/recipes.json
 - `schema/recipes.schema.json` — JSON Schema (draft 2020-12) that `recipes.json` must satisfy.
 - `scripts/validate_recipes.py` — schema validation + duplicate-`id` check; run locally and in CI.
 - `.github/workflows/validate.yml` — CI job (`Validate recipes.json`) required by branch protection before merge.
+- `docs/home-assistant-setup.md` — full Home Assistant integration guide (sensors, script, dashboard card). If you change the shape of `recipes.json`, `id`/`description` semantics, or anything else this guide's YAML snippets rely on, update it in the same PR — it's the only place that documents how a consumer actually wires this up.
