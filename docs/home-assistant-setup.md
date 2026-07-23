@@ -13,7 +13,7 @@ Add a `rest:` resource (merge into an existing `rest:` block if you already have
 
 ```yaml
 rest:
-  - resource: https://raw.githubusercontent.com/ftrauernicht/hassio-dashboard-recipes/main/recipes/recipes.json
+  - resource: https://raw.githubusercontent.com/ftrauernicht/ha-dashboard-recipes/main/recipes/recipes.json
     scan_interval: 3600 # raw.githubusercontent.com is CDN-cached for a few minutes; polling more often has no effect
     sensor:
       - name: "Dish List"
