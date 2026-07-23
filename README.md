@@ -1,4 +1,4 @@
-# hassio-dashboard-recipes
+# ha-dashboard-recipes
 
 A community-editable list of dishes ("Gerichte") used by a Home Assistant dashboard tile that picks a random dish for dinner. The data lives here, in this public repo, instead of hardcoded in a Home Assistant YAML file — so it can be extended via Pull Request without touching the Home Assistant config directly.
 
@@ -39,7 +39,7 @@ All changes to `recipes/recipes.json` happen through Pull Requests — direct pu
 The repo is public, so the raw data file can be polled directly, no authentication needed:
 
 ```
-https://raw.githubusercontent.com/ftrauernicht/hassio-dashboard-recipes/main/recipes/recipes.json
+https://raw.githubusercontent.com/ftrauernicht/ha-dashboard-recipes/main/recipes/recipes.json
 ```
 
 For the full picture — a sensor that avoids repeating recent picks, the picking script, and a ready-to-paste dashboard card (with a screenshot) — see **[docs/home-assistant-setup.md](docs/home-assistant-setup.md)**.
@@ -48,7 +48,7 @@ Minimal example if you just want the raw list as a sensor attribute:
 
 ```yaml
 rest:
-  - resource: https://raw.githubusercontent.com/ftrauernicht/hassio-dashboard-recipes/main/recipes/recipes.json
+  - resource: https://raw.githubusercontent.com/ftrauernicht/ha-dashboard-recipes/main/recipes/recipes.json
     scan_interval: 3600 # raw.githubusercontent.com is CDN-cached for a few minutes; polling more often than that has no effect
     sensor:
       - name: "Dish List"
