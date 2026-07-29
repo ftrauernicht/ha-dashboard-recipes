@@ -1,5 +1,9 @@
 # ha-dashboard-recipes
 
+[![Validate](https://github.com/ftrauernicht/ha-dashboard-recipes/actions/workflows/validate.yml/badge.svg)](https://github.com/ftrauernicht/ha-dashboard-recipes/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/github/license/ftrauernicht/ha-dashboard-recipes)](LICENSE)
+[![Recipes](https://img.shields.io/badge/dynamic/json?color=blue&label=recipes&query=%24.recipes.length&url=https%3A%2F%2Fraw.githubusercontent.com%2Fftrauernicht%2Fha-dashboard-recipes%2Fmain%2Frecipes%2Frecipes.json)](recipes/recipes.json)
+
 A community-editable list of dishes ("Gerichte") used by a Home Assistant dashboard tile that picks a random dish for dinner. The data lives here, in this public repo, instead of hardcoded in a Home Assistant YAML file — so it can be extended via Pull Request without touching the Home Assistant config directly.
 
 ## Data format
