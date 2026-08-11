@@ -49,6 +49,7 @@
     { "id": "french-toast-sweet", "name": "French Toast - Süß (Armer Ritter)" },
     { "id": "cold-kitchen", "name": "Nichts." },
     { "id": "gruenkohl-eintopf", "name": "Grünkohl" },
-    { "id": "sunday", "name": "Fleisch mit Gemüse und Knödeln o. Kartoffeln" }
+    { "id": "sunday", "name": "Fleisch mit Gemüse und Knödeln o. Kartoffeln" },
+    { "id": "gnocchi-mit-spinat-und-feta", "name": "Gnocchi mit Spinat und Feta" }
   ]
 }
